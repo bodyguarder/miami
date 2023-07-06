@@ -26,15 +26,20 @@
 
         <a class="header__phone-link" href="tel:+12345555555">
           <span class="sr-only">link to phone number</span>
+
+          <span class="header__phone-number">+1 234 555-55-55</span>
+
           <span class="header__phone-icon" style="background-image: url('images/sprite.svg#phone-icon');"></span>
         </a>
       </div>
 
       <div class="header__bottom">
-        <h1 class="header__title">Miami
+        <h1 class="header__title">Miami <br>
           Condo Kings</h1>
       </div>
+    </div>
 
+    <div class="header__wrapper">
       <ul class="header__nav-list">
         <li class="header__nav-item">
           <a class="header__nav-link" href="#">home</a>
@@ -57,19 +62,21 @@
         </li>
 
         <li class="header__nav-item">
-          <a class="header__nav-link" href="#">contacts</a>
-        </li>
+          <ul class="header__nav-sublist">
+            <li class="header__nav-subitem">
+              <a class="header__nav-sublink" href="tel:+12345555555">+1 234 555-55-55</a>
+            </li>
 
-        <li class="header__nav-item">
-          <a class="header__nav-link header__nav-link--phone" href="tel:+12345555555">+1 234 555-55-55</a>
-        </li>
-
-        <li class="header__nav-item">
-          <a class="header__nav-link header__nav-link--order" href="#">call to order</a>
+            <li class="header__nav-subitem">
+              <a class="header__nav-sublink" href="#">call to order</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
   </header>
+
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

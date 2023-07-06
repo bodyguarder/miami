@@ -1,13 +1,60 @@
 .header {
+  height: 100vh;
+  position: relative;
   padding: 25px 0 80px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__top {
+    margin-bottom: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__button {
+    z-index: 3;
+  }
+
+  &__logo {
+    margin-left: 120px;
+
+    @include media-4 {
+      margin-left: 0;
+    }
+  }
+
+  &__phone-link {
+    display: flex;
+    align-items: center;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .header__phone-number {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__phone-number {
+    margin-right: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $white;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+
+    @include media-4 {
+      display: none;
+    }
   }
 
   &__phone-icon {
@@ -17,9 +64,114 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include media-4 {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    padding-top: 24px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    line-height: 1;
+    letter-spacing: -2px;
+    font-size: 80px;
+    font-weight: 700;
+    color: $white;
+
+    @include media-4 {
+      font-size: 46px;
+      letter-spacing: -1px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: $white;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $blue-200;
+    transform: translateX(-200%);
+    transition: transform 0.5s linear;
+
+    &--active {
+      transform: translateX(0);
+    }
   }
 
   &__nav-list {
-    display: none;
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  &__nav-item {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    font-size: 22px;
+    color: $white;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s linear;
+    
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+
+  &__nav-sublist {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__nav-subitem {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__nav-sublink {
+    display: block;
+    font-size: 12px;
+    color: $white;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s linear;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-bottom: 1px solid $white;
+      }
+    }
   }
 }
