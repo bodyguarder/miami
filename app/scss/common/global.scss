@@ -53,3 +53,34 @@ body.hidden {
   overflow: hidden;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+
+  @include media-4 {
+    font-size: 36px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/sprite.svg#corona-icon');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: $blue-100;
+}
+
