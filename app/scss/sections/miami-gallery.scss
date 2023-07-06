@@ -1,0 +1,56 @@
+.miami-gallery {
+  padding-bottom: 100px;
+  
+  &__container {
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align-last: left;
+  }
+
+  &__places-list {
+    display: grid;
+    gap: 24px;
+
+    &--width-1 {
+      grid-template-columns: minmax(129px, 66%) minmax(129px, auto);
+    }
+
+    &--width-2 {
+      grid-template-columns: repeat(2, minmax(129px, 1fr));
+    }
+
+    &--width-3 {
+      grid-template-columns: minmax(129px, auto) minmax(129px, 66%);
+    }
+  }
+
+  &__places-item {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  &__img {
+    object-fit: cover;
+
+    @include media-4 {
+      height: 131px;
+    }
+  }
+
+  &__places-name {
+    grid-column: 1/-1;
+    font-weight: 700;
+
+    span {
+      color: $blue-100;
+    }
+  }
+}
