@@ -218,7 +218,59 @@
         </ul>
       </div>
     </section>
+
+    <section class="contacts-section">
+      <div class="contacts-section__container container">
+        <h2 class="contacts-section__title title">Contact us</h2>
+
+        <div class="contacts-section__wrapper">
+          <ul class="contacts-section__list">
+            <li class="contacts-section__item">
+              <span class="contacts-section__subtitle">Phone</span>
+
+              <a class="contacts-section__link" href="tel:+12345555555">+1 234 5555-55-55</a>
+            </li>
+
+            <li class="contacts-section__item">
+              <span class="contacts-section__subtitle">Email</span>
+
+              <a class="contacts-section__link" href="mailto:hello@miami.com">hello@miami.com</a>
+            </li>
+
+            <li class="contacts-section__item contacts-section__item--address">
+              <span class="contacts-section__subtitle">Address</span>
+
+              <a class="contacts-section__link" href="https://goo.gl/maps/Guy58w5B8hfjoTfY9">400 first ave. n.suite
+                700 Minneapolis, MN
+                55401</a>
+            </li>
+          </ul>
+
+          <form class="contacts-section__form send-form" action="#">
+            <label class="sr-only send-form__name-label" for="name-input">input your name</label>
+            <input class="send-form__input" id="name-input" name="name-input" type="text" placeholder="Name">
+
+            <label class="sr-only send-form__email-label" for="email-input">input your email</label>
+            <input class="send-form__input" id="email-input" name="email-input" type="email" placeholder="Email">
+
+            <label class="sr-only send-form__textarea-label" for="textarea-input">input your message</label>
+            <textarea class="send-form__input send-form__input--textarea" name="textarea-input" id="textarea-input" rows="5" placeholder="Message"></textarea>
+
+            <button class="send-form__button button" type="submit">Consultation</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer" style="background-image: url('images/sections/footer/footer-background.jpg');">
+    <div class="footer__container container">
+      <a class="footer__logo logo" href="#">
+        <span class="sr-only">link to main page</span>
+        <img class="logo__img" src="images/sprite.svg#logo" width="136" height="80" alt="logotype">
+      </a>
+    </div>
+  </footer>
 
   <script src="js/main.min.js"></script>
 </body>
